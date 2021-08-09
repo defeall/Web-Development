@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset = "UTF-8">
+	<title> Lightbox </title>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<style>
+	body{
+		background: url("bg.jpg");
+		background-position: center center;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	.wrapper{
+		width: 1170px;
+		margin: 0 auto;
+		
+	}
+	.wrapper a img{
+		width: 600px;
+		height: 400px;
+	
+	}
+	
+	.wrapper a{
+		width: 45%;
+		float: left;
+		margin: 2px;
+		
+	}
+	
+</style>
+</head>
+<body>
+	<div class = "wrapper">
+		<a data-fancybox="gallery" href="1.jpg" data-caption="Image 1"><img src="1.jpg"></a>
+		<a data-fancybox="gallery" href="2.jpg" data-caption="Image 2"><img src="2.jpg"></a>
+	    <a data-fancybox="gallery" href="3.jpg" data-caption="Image 3"><img src="3.jpg"></a>
+		<a data-fancybox="gallery" href="4.jpg" data-caption="Image 4"><img src="4.jpg"></a>
+	    <a data-fancybox="gallery" href="5.jpg" data-caption="Image 5"><img src="5.jpg"></a>
+		<a data-fancybox="gallery" href="6.jpg" data-caption="Image 6"><img src="6.jpg"></a>
+		<a data-fancybox="gallery" href="7.jpg" data-caption="Image 7"><img src="7.jpg"></a>
+		<a data-fancybox="gallery" href="8.jpg" data-caption="Image 8"><img src="8.jpg"></a>
+	</div>
+
+	<script>
+		$('[data-fancybox="gallery"]').fancybox({
+			loop: true,
+			buttons: [
+				"zoom",
+				"share",
+				"slideShow",
+				"fullScreen",
+				"download",
+				"thumbs",
+				"close"
+			],
+			animationEffect: "slide",
+			transitionEffect: "rotate"
+		});
+	
+	</script>
+
+</body>
+</html> 
