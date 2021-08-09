@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Accordion</title>
+    <style>
+      html, body {
+        font-size: 100%;
+		background-color:#87CEEB ;
+      }
+      
+      .accordion {
+        margin: 100px;
+		margin-right: 1000px;
+      }
+      
+      .accordion dt,
+      .accordion dd {
+        padding: 10px;
+        border: 1px solid #000;
+      }
+      
+      .accordion dt a,
+      .accordion dd a {
+        display: block;
+        color: #000;
+        font-weight: bold;
+      }
+      
+      .accordion dt {
+        background-color: #87CEFA;
+      }
+      
+      .accordion dd {
+        margin: 0;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        font-size: 1rem;
+		background-color: white;
+      }
+      
+      .accordion dd:last-of-type {
+        border-bottom-width: 1px;
+      }
+	  .accordion dt .leftArrow{
+		width: 50px;
+		background: #00000036;
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		transition: background 0.5s;
+		height: 72px;
+		top: 50%;
+		transform: translateY(-50%);
+		border-top-right-radius: 10px;
+	 }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        
+        // Hide all panels to start
+        var panels = $('.accordion > dd').hide();
+        
+        // Show first panel on load (optional). Remove if you want
+        panels.first().show();
+        
+        // On click of panel title
+        $('.accordion > dt > a').click(function() {
+          var $this = $(this);
+          
+          // Slide up all other panels
+          panels.slideUp();
+          
+          //Slide down target panel
+          $this.parent().next().slideDown();
+          
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <dl class="accordion">
+      <dt class="arrow arrowLeft"><a href="">Facebook</a></dt>
+      <dd>Top Social Media <br> Find a new Friends <br> Upload you video</dd>
+      <dt><a href="">Instagram</a></dt>
+      <dd>Top Social Media <br> Find a new Friends <br> Upload you video</dd>
+      <dt><a href="">Twitter</a></dt>
+      <dd>Top Social Media <br> Find a new Friends <br> Upload you video</dd>
+	  <dt><a href="">Youtube</a></dt>
+      <dd>Top Social Media <br> Find a new Friends <br> Upload you video</dd>
+    </dl>
+  </body>
+</html>
