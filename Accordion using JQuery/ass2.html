@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Accordion</title>
+    <style>
+      html, body {
+        font-size: 100%;  
+      }
+      
+      .accordion {
+        margin: 50px;
+      }
+      
+      .accordion dt,
+      .accordion dd {
+        padding: 10px;
+        border: 1px solid #000;
+      }
+      
+      .accordion dt a,
+      .accordion dd a {
+        display: block;
+        color: #000;
+        font-weight: bold;
+      }
+      
+      .accordion dt {
+        background-color: #ccc;
+      }
+      
+      .accordion dd {
+        margin: 0;
+        border-top-width: 0;
+        border-bottom-width: 0;
+        font-size: 1rem;
+      }
+      
+      .accordion dd:last-of-type {
+        border-bottom-width: 1px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($){
+        
+        // Hide all panels to start
+        var panels = $('.accordion > dd').hide();
+        
+        // Show first panel on load (optional). Remove if you want
+        panels.first().show();
+        
+        // On click of panel title
+        $('.accordion > dt > a').click(function() {
+          var $this = $(this);
+          
+          // Slide up all other panels
+          panels.slideUp();
+          
+          //Slide down target panel
+          $this.parent().next().slideDown();
+          
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <dl class="accordion">
+      <dt><a href="">Panel 1</a></dt>
+      <dd>You are at the most lovable and known site.</dd>
+      <dt><a href="">Panel 2</a></dt>
+      <dd>This person has a great sense of humour plus he is very goodlooking and awesome persom you can ever met.</dd>
+      <dt><a href="">Panel 3</a></dt>
+      <dd>This person helps a lot to keep this work going and you really a great person for me.</dd>
+    </dl>
+  </body>
+</html>
