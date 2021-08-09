@@ -1,1 +1,1 @@
-This file contains a simple accordion using Jquery
+This file contains two different simple accordion using Jquery
