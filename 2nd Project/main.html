@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Beats by the one </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		.logo{
+			position: relative;
+			float: left;
+			margin-top: 25px;
+			margin-left: 15px;
+		}
+
+		.myVideo{
+			height: 60%;
+			width: 100%;
+			position: fixed;
+ 			right: 0;
+  			bottom: 0;
+  			background-position: center;
+  			background-size: cover;
+    			top: 0;
+    			left: 0;
+    			overflow: hidden;
+    			z-index: -100;
+		}
+
+		ul{
+			position: relative;
+			float: right;
+			list-style-type: none;
+			margin-top: 25px;
+			right: 3px;
+		}
+
+		ul li{
+			display: inline-block;
+		}
+
+		ul li a{
+			display: inline-block;
+			text-decoration: none;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			border: 1px solid #B21F14;
+			font-family: Century Gothic;
+			font-weight: bolder;
+			font-size: 120%;
+			transition: 0.6s ease;
+		}
+
+		ul li a:hover{
+			background-color: #B21F14;
+			color: blue;
+			border-color: white;
+		}
+
+		li a, .dropbtn {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		li a:hover, .dropdown:hover .dropbtn {
+			background-color: #B21F14;
+		}
+
+		li.dropdown {
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: black;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: center;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #B21F14;
+			color: black;
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		.container {
+			display: inline-block;
+			cursor: pointer;
+		}
+
+		.dropdown-con {
+			display: none;
+			position: absolute;
+			background-color: black;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+
+
+		#d1 a{
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			text-align: center;
+		}
+ 
+		#d1 a:hover {
+			background-color: #B21F14;
+			color: black;
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+
+		main{
+			margin-bottom: 25px;
+		}
+
+		.power{
+			font-size: 450%;
+			color: #B21F14;
+			text-align: center;
+			font-family: fantasy;
+			margin: 0px;
+		}
+
+		.power a{
+			color: #B21F14;
+		}
+
+		.power a:hover{
+			color: white;
+			transition: 0.8s ease;
+		}
+
+		.line1{
+			text-align: center;
+		}
+
+		.power1{
+			float: left;
+			width: 50%;
+		}
+
+		.power1:hover{
+			color: white;
+			position: relative;
+			transition: 0.3s;
+			-webkit-animation: mymove 2s forwards;
+			-webkit-animation-timing-function: linear;
+		}
+
+		@-webkit-keyframes mymove {
+			from {left: 0px;}
+			to {left: 350px;}
+		}
+
+		.imagej{
+			display: none;
+			float: right;
+			width: 25%;
+			transition: 0.8s ease;
+			margin-right: 10px;
+		}
+
+		.power1:hover + .imagej{
+			transition: 0.3s ease;
+			display: block;
+		}
+		footer{
+			background-color: white;
+			clear: both;
+		}
+
+	</style>
+</head>
+<body bgcolor="black">
+	<header bgcolor="black">
+
+		<div class="main-nav" bgcolor="blue">
+			<div class="logo">
+				<a href="#"><img src="logo.png" height="20%" width="20%"></a>
+			</div>
+
+			<ul>
+
+				<li class="dropdown">
+				<a class="dropbtn">Headphones</a>
+    				<div class="dropdown-content">
+    				<a href="https://www.amazon.ca/Beats-Wireless-Headphones-Decade-Collection/dp/B07DJ35GFR/ref=sr_1_1?keywords=Beats+by+Dre+Solo3+Wireless+On-Ear+Headphones+-+The+Beats+Decade+Collection+%28Defiant+Black-Red%29&qid=1569106888&sr=8-1"><img src="1.jpg" height="35%" width="35%"> <br> Beats by Dre Solo3 Wireless On-Ear Headphones - The Beats Decade Collection (Defiant Black-Red)</a>
+    				<a href="https://www.amazon.ca/Beats-EP-Wired-Ear-Headphone/dp/B01LX8OJMT/ref=sr_1_5?keywords=Beats+EP+On-Ear+Headphones&qid=1569107077&sr=8-5"><img src="2.jpeg" height="35%" width="35%"> <br>Beats EP On-Ear Headphones</a>
+    				<a href="https://www.amazon.ca/Beats-Studio3-Wireless-Over-Ear-Headphones/dp/B075G4YHDD/ref=sr_1_3?keywords=BEATS+Studio+3+Wireless+Bluetooth+Noise-Cancelling+Headphones+-+Blue&qid=1569107316&sr=8-3"><img src="3.jpg" height="35%" width="35%"> <br>BEATS Studio 3 Wireless Bluetooth Noise-Cancelling Headphones - Blue</a>
+    				<a href="https://www.amazon.ca/s?k=beat+headphones&crid=1TNSF4P7H13S2&sprefix=beat+headphones%2Caps%2C148&ref=nb_sb_ss_i_1_15">MORE</a>
+    				</div>
+				</li>
+
+				<li class="dropdown">
+    				<a class="dropbtn">Earphones</a>
+    				<div class="dropdown-content">
+    				<a href="https://www.amazon.ca/Fusion-Beats-Headphones-Cancelling-Sweatproof/dp/B01NGTTOCB/ref=sr_1_1?keywords=Fusion+Beats+Bluetooth+Wireless+Sports+Earphones+%2F+Sweatproof+Earbuds+for+Gym+Running&qid=1569108616&sr=8-1"> <img src="4.jpg" height="35%" width="35%"> <br> Fusion Beats Bluetooth Wireless Sports Earphones / Sweatproof Earbuds for Gym Running</a>
+    				<a href="https://www.amazon.ca/urBeats3-Earphones-3-5mm-Plug-Collection/dp/B07HKLTQ97/ref=sr_1_fkmr2_1?keywords=Beats+by+Dr.+Dre+-+urBeats%C2%B3+Earphones+with+3.5mm+Plug+-+Defiant+Black-Red+%28The+Beats+Decade+Collection%29&qid=1569108745&sr=8-1-fkmr2"> <img src="5.jpg" height="35%" width="35%"><br>Beats by Dr. Dre - urBeats³ Earphones with 3.5mm Plug - Defiant Black-Red (The Beats Decade Collection)</a>
+    				<a href="https://www.amazon.ca/BeatsX-Wireless-In-Ear-Headphones-Black/dp/B01LZUH820/ref=sr_1_1?keywords=Beats+by+Dr.+Dre+-+BeatsX+Wireless+Earphones+-+Black&qid=1569108828&sr=8-1"> <img src="6.png" height="35%" width="35%"><br> Beats by Dr. Dre - BeatsX Wireless Earphones - Black </a>
+    				<a href="https://www.amazon.ca/s?k=beats+earphones&ref=nb_sb_noss_1">MORE</a>
+    				</div>
+				</li>
+
+				<li class="dropdown">
+    				<a class="dropbtn">Speakers</a>
+    				<div class="dropdown-content">
+    				<a href="https://www.amazon.ca/Beats-ML4M2LL-Portable-Bluetooth-Wireless/dp/B01889ZP3Q/ref=sr_1_6?keywords=BEATS+Pill%2B+Portable+Bluetooth+Wireless+Speaker+-+Black&qid=1569109095&sr=8-6"> <img src="7.jpg" height="35%" width="35%"> <br> BEATS Pill+ Portable Bluetooth Wireless Speaker - Black</a>
+    				<a href="https://www.ebay.ca/i/273955331953?chn=ps&norover=1&mkevt=1&mkrid=706-89093-2056-0&mkcid=2&itemid=273955331953&targetid=607627058052&device=c&mktype=pla&googleloc=9000471&poi=&campaignid=1669215008&mkgroupid=63013116685&rlsatarget=pla-607627058052&abcId=1063836&merchantid=10252592&gclid=Cj0KCQjwlJfsBRDUARIsAIDHsWqtBAtIeiygclow47cYm_YCWAZoq4wtE4UC7n18xR_9iwJvBhnPO8UaAhdDEALw_wcB"> <img src="8.jpg" height="35%" width="35%"><br>Monster Beats by Dr Dre Beatbox iPod Speaker Dock</a>
+    				<a href="https://www.amazon.ca/Speaker-Alexa-control-built-Silver/dp/B07FD5FZ9P/ref=asc_df_B07FD5FZ9P/?tag=googleshopc0c-20&linkCode=df0&hvadid=293001949856&hvpos=1o10&hvnetw=g&hvrand=8013409582474980298&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9000471&hvtargid=pla-570393997869&psc=1"> <img src="9.jpg" height="35%" width="35%"><br> Beats Wireless Speakers - Gemwitts Enterprises</a>
+    				<a href="https://www.amazon.ca/s?k=beat+speakers&ref=nb_sb_noss_2">MORE</a>
+    				</div>
+				</li>
+
+				<li>
+					<a href="#">Support</a>
+				</li>
+			</ul>
+
+
+
+			<video autoplay muted loop id="myVideo" width="100%">
+	  		<source src="v1.mp4" type="video/mp4"></video>
+  		</div>
+	</header>
+
+	<main>
+		<div class="power1">
+		<p class="power"><a href="https://www.amazon.com/dp/B07R5QD598?aaxitk=.Xg9Af-ls204jS-8LED6iQ&pd_rd_i=B07R5QD598&pf_rd_p=44fc3e0f-4b9e-4ed8-b33b-363a7257163d&hsa_cr_id=1061116440801&sb-ci-n=asinImage&sb-ci-v=https%3A%2F%2Fimages-na.ssl-images-amazon.com%2Fimages%2FI%2F31hGhh27nRL.jpg&sb-ci-a=B07R5QD598"> Introducing Powerbeats PRO </a> <h2 class="line1"> Totally wireless Powerbeats Pro earphones are built to revolutionize your workouts.</h2> <h1 class="line1">NOW AVAILABLE IN ALL COLOURS</h1> </p>
+		</div>
+		<img class="imagej" src="10.jpg" height="10%" width="10%"><br><br><br>
+	</main>
+
+	<main class="btn">
+
+	</main><br><br><br>
+</body>
+</html>
